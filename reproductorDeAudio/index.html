@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reproductor de Punk Rock</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <audio id="sonido" oncanplay="play();">
+      <source src="lucy.mp3" type="audio/mpeg">
+    </audio>
+    <button id="play" onclick="play(sonido);">Play</button>
+    <button id="stop" onclick="stop();">Stop</button>
+    <button id="pause" onclick="pause();">Pause</button>
+    <button id="advance" onclick="advance();">Advance</button>
+    <button id="back" onclick="back();">Back</button>
+    <button id="volume" onclick="volume();">Volume</button>
+    <script src="js\reproductor.js"></script>
+  </body>
+</html>
