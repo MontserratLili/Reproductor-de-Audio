@@ -3,18 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Reproductor de Punk Rock</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="botones\favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets\css\reproductor.css" media="screen" />
   </head>
   <body>
-    <audio id="sonido" oncanplay="play();">
-      <source src="lucy.mp3" type="audio/mpeg">
-    </audio>
-    <button id="play" onclick="play(sonido);">Play</button>
-    <button id="stop" onclick="stop();">Stop</button>
-    <button id="pause" onclick="pause();">Pause</button>
-    <button id="advance" onclick="advance();">Advance</button>
-    <button id="back" onclick="back();">Back</button>
-    <button id="volume" onclick="volume();">Volume</button>
-    <script src="js\reproductor.js"></script>
+    <section>
+      <output id="contador" value="sonido.currentTime"></output>
+    </section>
+    <center>
+    <br><br>
+    <img src="botones\reproductor.png" width="450" height="350" class="imgcenter"></img><br><br>
+    <audio id="sonido" src="lucy.mp3" type="audio/mpeg"></audio>
+    <button id="playSong" onclick="playAudio()"><img src="botones\play.jpg" width="50" height="50" class="imgcenter"></button>
+    <button id="stop" onclick="stopAudio(); return true"><img src="botones\stop.jpg" width="50" height="50" class="imgcenter"></button>
+    <button id="pause" onclick="pauseAudio();"><img src="botones\pausa.jpg" width="50" height="50" class="imgcenter"></button>
+    <button id="advance" onclick="advanceAudio();"><img src="botones\avanzar.jpg" width="50" height="50" class="imgcenter"></button>
+    <button id="back" onclick="backAudio();"><img src="botones\retroceder.jpg" width="50" height="50" class="imgcenter"></button>
+    <button id="volume" onclick="volumeAudioUp();"><img src="botones\volumen.jpg" width="50" height="50" class="imgcenter"></button>
+    <button id="volume" onclick="volumeAudioDown();"><img src="botones\menos.jpg" width="50" height="50" class="imgcenter"></button>
+    </center>
+    <script src="assets\js\reproductor.js"></script>
   </body>
 </html>
