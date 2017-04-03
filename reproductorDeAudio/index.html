@@ -7,20 +7,20 @@
     <link rel="stylesheet" type="text/css" href="assets\css\reproductor.css" media="screen" />
   </head>
   <body>
-    <section>
-      <output id="contador" value="sonido.currentTime"></output>
-    </section>
+
     <center>
     <br><br>
-    <img src="botones\reproductor.png" width="450" height="350" class="imgcenter"></img><br><br>
-    <audio id="sonido" src="lucy.mp3" type="audio/mpeg"></audio>
-    <button id="playSong" onclick="playAudio()"><img src="botones\play.jpg" width="50" height="50" class="imgcenter"></button>
-    <button id="stop" onclick="stopAudio(); return true"><img src="botones\stop.jpg" width="50" height="50" class="imgcenter"></button>
-    <button id="pause" onclick="pauseAudio();"><img src="botones\pausa.jpg" width="50" height="50" class="imgcenter"></button>
-    <button id="advance" onclick="advanceAudio();"><img src="botones\avanzar.jpg" width="50" height="50" class="imgcenter"></button>
-    <button id="back" onclick="backAudio();"><img src="botones\retroceder.jpg" width="50" height="50" class="imgcenter"></button>
-    <button id="volume" onclick="volumeAudioUp();"><img src="botones\volumen.jpg" width="50" height="50" class="imgcenter"></button>
-    <button id="volume" onclick="volumeAudioDown();"><img src="botones\menos.jpg" width="50" height="50" class="imgcenter"></button>
+      <img src="botones\reproductor.png" width="450" height="350" class="imgcenter"></img><br><br>
+      <progress id="barraDeProgreso" value="0" max="100">0%</progress><br><br>
+      <span id="currentTime"></span>
+      <audio id="sonido" src="lucy.mp3" type="audio/mpeg" ontimeupdate="barra()"></audio>
+      <button id="playSong" onclick="playAudio()"><img src="botones\play.jpg" width="50" height="50" class="imgcenter"></button>
+      <button id="stop" onclick="stopAudio(); return true"><img src="botones\stop.jpg" width="50" height="50" class="imgcenter"></button>
+      <button id="pause" onclick="pauseAudio();"><img src="botones\pausa.jpg" width="50" height="50" class="imgcenter"></button>
+      <button id="advance" onclick="advanceAudio();"><img src="botones\avanzar.jpg" width="50" height="50" class="imgcenter"></button>
+      <button id="back" onclick="backAudio();"><img src="botones\retroceder.jpg" width="50" height="50" class="imgcenter"></button>
+      <button id="volume" onclick="volumeAudioUp();"><img src="botones\volumen.jpg" width="50" height="50" class="imgcenter"></button>
+      <button id="volume" onclick="volumeAudioDown();"><img src="botones\menos.jpg" width="50" height="50" class="imgcenter"></button>
     </center>
     <script src="assets\js\reproductor.js"></script>
   </body>

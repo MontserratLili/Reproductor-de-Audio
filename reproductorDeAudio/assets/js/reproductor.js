@@ -1,13 +1,6 @@
-console.log(document.getElementById("contador"));
-/*var a =document.getElementById("sonido").currentTime;
-console.log(a);
-for(a; a<a.currentTime; a++){
-  var contador=a+a;
-  document.getElementById("song").innerHTML="contador";
-}*/
-
 function playAudio(){
   document.getElementById("sonido").play();
+  barraDeProgreso.max=sonido.duration;
 }
 function stopAudio(){
   document.getElementById("sonido").currentTime =300;
@@ -29,4 +22,12 @@ function volumeAudioDown(){
 }
 function progresoAudio(){
   document.getElementById("sonido").currentTime+=0.1;
+}
+function barra(){
+  var a = document.getElementById("sonido");
+  var b = document.getElementById("barraDeProgreso");
+  var currentTime = document.getElementById("currentTime");
+  currentTime.innerHTML=sonido.currentTime;
+  b.value=sonido.currentTime;
+  console.log(sonido.currentTime);
 }
